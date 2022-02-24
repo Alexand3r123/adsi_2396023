@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        table{
+            margin: 1rem auto;
+            border-collapse: collapse;
+            width: 70%;
+        }
+        table th{
+            background-color: #d86405;
+            color: #fff;
+        }
+        table td,
+        table td{
+            border: 1px solid #333);
+            padding: 4px;
+        }
+
+        tr:nth-of-type(even){
+            background-color: #FFFFFF90;
+        }
+        tfoot td{
+            text-align: center;
+            background-color: #ffffff90;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>Tables</h1>
+        </header>
+        <section>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Month</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Water</td>
+                        <td>January</td>
+                        <td>$90</td>
+                    </tr>
+                    <tr>
+                        <td>Internet</td>
+                        <td>February</td>
+                        <td>$70</td>
+                    </tr>
+                    <tr>
+                        <td>Ligth</td>
+                        <td>March</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>Gas</td>
+                        <td>April</td>
+                        <td>$30</td>
+                    </tr>
+                    <tr>
+                        <td>Garbage</td>
+                        <td>September</td>
+                        <td>$10</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">2022</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

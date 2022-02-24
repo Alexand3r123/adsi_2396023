@@ -1,0 +1,14 @@
+h3{
+    background: linear-gradient(to top, #b41313, #0026ff);
+    text-align: center;
+    font-size: 4rem;
+    font-size: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 800px){
+    h3{
+        font-size: 3rem;
+    }
+}
