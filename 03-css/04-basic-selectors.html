@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Selectors</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        /* Universal ----------------*/
+        section * {
+            border: 1px solid slateblue;
+            padding: 10px ;
+        }
+        /* Type ---------------------*/
+        ul {
+            list-style: none;
+        }
+        li {
+            font-size: 1.2rem;
+        }
+        /* Descending ----------------*/
+        ul li {
+            background-color:cadetblue;
+        }
+        /* Class ---------------------*/
+        .upper {
+            text-transform: uppercase;
+        }
+        .uniderline {
+            text-decoration: underline;
+        }
+        /* Identification ------------*/
+        #important {
+            font-weight: 500;
+            background-color:aliceblue;
+        }
+        /* Combine -------------------*/
+        section ul.animes li#important {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>Basic Selectors</h1>
+        </header>
+        <section>
+            <ul class="animes">
+                <li class="upper underline">Goku</li>
+                <li id="important">Vegeta</li>
+                <li>Maestro Roshi</li>
+                <li>Gohan</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

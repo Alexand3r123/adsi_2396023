@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dcoument Style</title>
+    <title>Relative Units</title>
     <link rel="stylesheet" href="css/master.css">
     <style>
-        h2 {
-            background-color: crimson;
-            font-size: 4rem;
-            text-align: center;
-            color: white;
-            padding: 4rem 2rem;
+        .em {
+            font-size: 2em;
+        }
+        .ex {
+            font-size: 2ex;
+        }
+        .rem {
+            font-size: 2.5rem;
         }
     </style>
 </head>
 <body>
     <main>
         <header>
-            <h1><a href="index.html">⬅</a>Document Style</h1>
+            <h1><a href="index.html">⬅</a>Relative Units</h1>
         </header>
         <section>
-            <h2>ADSI 2396023</h2>
+            <h2 class="em">Lorem (2 em)</h2>
+            <h2 class="ex">Lorem (2 ex)</h2>
+            <h2 class="rem">Lorem (2.5 rem)</h2>
         </section>
     </main>
 </body>
