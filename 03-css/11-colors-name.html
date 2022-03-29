@@ -7,59 +7,68 @@
     <title>Colors Name</title>
     <link rel="stylesheet" href="css/master.css">
     <style>
-        div.row1,
-        div.row2 {
+        section div.row {
             margin: 0 auto;
+            width: 100%;
         }
-        div.row div {
+        section div div {
+            font-size: 1.3rem;
             color: black;
             display: inline-block;
-            font-size: 1.4rem;
             margin-left: -5px;
-            height: 200px;
-            line-height: 13rem;
             text-align: center;
-            width: 20%;
+            line-height: 5rem;
+            height: 150px;
+            width: 20%
+            
         }
-        div.row3 {
-            margin: 0 auto;
-            width: 80%;
+        section div div:first-child {
+        margin-left: 0;
         }
-        div.row3 div {
-            width: 25%;
-        }
-        div.row4 {
-            margin: 0 auto;
-            width: 60%;
-        }
-        div.row4 div {
-            width: 33.33%;
-        }
-        div.row div.text-white {
+        section div div:first-child ,
+        section div div:last-child {
             color: white;
         }
-        div.row div.maroon { background-color: yellow; }
-        div.row div.red    { background-color: red; }
-        div.row div.orange { background-color: blue; }
-        div.row div.yellow { background-color: gold; }
-        div.row div.olive  { background-color: olive; }
 
-        div.row div.purple  { background-color: purple; }
-        div.row div.fuchsia { background-color: fuchsia; }
-        div.row div.white   { background-color: white; }
-        div.row div.lime    { background-color: lime; }
-        div.row div.green   { background-color: green; }
+        section div.row.row3{
+            width: 80%;
+        }
 
-        div.row div.navy { background-color: navy; }
-        div.row div.blue { background-color: blue; }
-        div.row div.aqua { background-color: aqua; }
-        div.row div.teal { background-color: teal; }
+        section div.row.row3 div{
+            width: 25%;
+        }
 
-        div.row div.black  { background-color: black; }
-        div.row div.silver { background-color: silver; }
-        div.row div.gray   { background-color: gray; }
+        section div.row.row4{
+            width: 60%;
+        }
+        
+        section div.row.row4 div{
+            width: 33%;
+        }
+
+        .maroon { background-color: maroon; }
+        .red    { background-color:red; }
+        .orange { background-color: orange; }
+        .yellow { background-color: yellow; }
+        .olive  { background-color: olive; }
+
+        .purple  { background-color:purple; }
+        .fuchsia { background-color:fuchsia; }
+        .white   { background-color: white; }
+        .lime    { background-color: lime; }
+        .green   { background-color: green; }
+
+        .navy { background-color: navy; }
+        .blue { background-color: blue; }
+        .aqua { background-color: aqua; }
+        .teal { background-color: teal; }
+
+       .black  { background-color: black; }
+       .silver { background-color: silver; }
+       .gray   { background-color: gray; }
 
     </style>
+
 </head>
 <body>
     <main>
@@ -68,29 +77,29 @@
         </header>
         <section>
             <div class="row row1">
-                <div class="maroon text-white">maroon</div>
+                <div class="maroon">maroon</div>
                 <div class="red">red</div>
                 <div class="orange">orange</div>
                 <div class="yellow">yellow</div>
-                <div class="olive text-white">olive</div>
+                <div class="olive">olive</div>
             </div>
             <div class="row row2">
-                <div class="purple text-white">purple</div>
+                <div class="purple">purple</div>
                 <div class="fuchsia">fuchsia</div>
                 <div class="white">white</div>
                 <div class="lime">lime</div>
-                <div class="green text-white">green</div>
+                <div class="green">green</div>
             </div>
             <div class="row row3">
-                <div class="navy text-white">navy</div>
-                <div class="blue text-white">blue</div>
+                <div class="navy">navy</div>
+                <div class="blue">blue</div>
                 <div class="aqua">aqua</div>
-                <div class="teal text-white">teal</div>
+                <div class="teal">teal</div>
             </div>
             <div class="row row4">
-                <div class="black text-white">black</div>
+                <div class="black">black</div>
                 <div class="silver">silver</div>
-                <div class="gray text-white">gray</div>
+                <div class="gray">gray</div>
             </div>
         </section>
     </main>

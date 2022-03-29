@@ -4,74 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RGB Hexadecimal</title>
+    <title>Colors RGB Decimal</title>
     <link rel="stylesheet" href="css/master.css">
     <style>
-        div.row1,
-        div.row2 {
+        section div.row {
             margin: 0 auto;
+            width: 100%;
         }
-        div.row div {
-            color: #000000;
+        section div div {
+            font-size: 1.2rem;
+            color: black;
             display: inline-block;
-            font-size: 1.4rem;
             margin-left: -5px;
-            height: 200px;
-            line-height: 13rem;
             text-align: center;
-            width: 20%;
+            line-height: 5rem;
+            height: 140px;
+            width: 20%
+            
         }
-        div.row3 {
-            margin: 0 auto;
+        section div div:first-child {
+        margin-left: 0;
+        }
+        section div div:first-child ,
+        section div div:last-child {
+            color: white;
+        }
+
+        section div.row.row3{
             width: 80%;
         }
-        div.row3 div {
+
+        section div.row.row3 div{
             width: 25%;
         }
-        div.row4 {
-            margin: 0 auto;
+
+        section div.row.row4{
             width: 60%;
         }
-        div.row4 div {
-            width: 33.33%;
+        
+        section div.row.row4 div{
+            width: 33%;
         }
-        div.row div.text-white {
-            color: #ffffff;
-        }
-        div.row div.maroon { background-color: #800000; }
-        div.row div.red    { background-color: #ff0000; }
-        div.row div.orange { background-color: #ffa500; }
-        div.row div.yellow { background-color: #ffff00; }
-        div.row div.olive  { background-color: #808000; }
 
-        div.row div.purple  { background-color: #800080; }
-        div.row div.fuchsia { background-color: #ff00ff; }
-        div.row div.white   { background-color: #ffffff; }
-        div.row div.lime    { background-color: #00ff00; }
-        div.row div.green   { background-color: #008000; }
+        .maroon { background-color: #800000; }
+        .red    { background-color: #ff0000; }
+        .orange { background-color: #ffa600; }
+        .yellow { background-color: #ffff00; }
+        .olive  { background-color: #808000; }
 
-        div.row div.navy { background-color: #000080; }
-        div.row div.blue { background-color: #0000ff; }
-        div.row div.aqua { background-color: #00ffff; }
-        div.row div.teal { background-color: #008080; }
+        .purple  { background-color: #800080; }
+        .fuchsia { background-color: #ff00ff; }
+        .white   { background-color: #ffffff; }
+        .lime    { background-color: #00ff00; }
+        .green   { background-color: #008000; }
 
-        div.row div.black  { background-color: #000000; }
-        div.row div.silver { background-color: #c0c0c0; }
-        div.row div.gray   { background-color: #808080; }
+        .navy { background-color: #000080; }
+        .blue { background-color: #0000ff; }
+        .aqua { background-color: #00ffff; }
+        .teal { background-color: #008080; }
 
-
-        @media screen and (max-width: 986px ) {
-            div.row div {
-                font-size: 1.2rem;
-            }
-        }
+       .black  { background-color: #000000; }
+       .silver { background-color: #bfbfbf; }
+       .gray   { background-color: #808080; }
 
     </style>
+
 </head>
 <body>
     <main>
         <header>
-            <h1><a href="index.html">⬅</a>RGB Hexadecimal</h1>
+            <h1><a href="index.html">⬅</a>Colors RGB Decimal</h1>
         </header>
         <section>
             <div class="row row1">
