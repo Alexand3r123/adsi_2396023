@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        .bg {
+            background: linear-gradient(135deg, #00000099 10%, transparent 0, transparent 50%, #00000099 0, #00000099 60%, transparent 0, transparent);
+            background-size: 7.07px 7.07px;
+        }
+
+        section {
+            position: relative;
+        }
+
+        div.parent {
+            position: absolute;
+            height: 340px;
+            width: 380px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        div.child{
+            background-color: #fff;
+            width: 200px;
+            font-size: 4rem;
+            text-align: center;
+            line-height: 12rem;
+            height: 200px;
+            /* ------- */
+            margin: 70px auto; 
+            /* Shorthard */
+            padding-left: 50px;
+            /* ------- */
+            padding: 0 0 0 50px;
+        }
+
+        div.child span{
+            background-color: #fff;
+            /* Forma larga */
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /* Forma corta / ShortHand: Padding top right bottom left */
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>Padding</h1>
+        </header>
+        <section>
+            <div class="parent">
+                <div class="child bg">
+                    <span>Box</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
