@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses</title>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+        nav a:link,
+        nav a:visited {
+            background-color: #0e63e2;
+            font-family: 'Times New Roman', Times, serif;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 0px 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #00e759;
+        }
+
+        nav a:active {
+            background-color: #e01414;
+        }
+
+        p::first-letter {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        p::first-line {
+            background-color: #83e2e9;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1><a href="index.html">⬅</a>Pseudoclasses</h1>
+        </header>
+        <section>
+            <h2>:link | :visited | :hover | :active</h2>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
+            </nav>
+            <br>
+            <h2>:first-letter | :first-line</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus corrupti inventore est esse. Natus
+                repudiandae itaque adipisci consectetur reprehenderit, error, cum eos pariatur ipsa laborum odit libero
+                rem repellendus architecto sequi nisi consequatur totam officiis molestias dolores cumque nulla quasi!
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
