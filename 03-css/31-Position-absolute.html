@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/master.css">
-        <title>Position Relative</title>
+        <title>Position absolute</title>
         <style>
             div.parentbox,
             div.parentbox div {
@@ -14,6 +14,7 @@
             }
             div.parentbox {
                 margin: 0 auto;
+                position: relative;
                 width: 360px;
             }
             div.parentbox div {
@@ -31,16 +32,16 @@
             }
             div.parentbox div.box2 {
                 background-color: #0e7d81;
-                position: relative;
+                position: absolute;
                 top: 50px;
-                left: 50px;
+                left: 220px;
             }
         </style>
     </head>
     <body>
         <main>
             <header>
-                <h1><a href="index.html">⬅</a>Position Relative</h1>
+                <h1><a href="index.html">⬅</a>Position absolute</h1>
             </header>
             <section>
                 <div class="parentbox">
@@ -52,4 +53,4 @@
             </section>
         </main>
     </body>
-</html>
+</html> 

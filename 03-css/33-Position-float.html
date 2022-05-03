@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/master.css">
-        <title>Position Relative</title>
+        <title>Position Float</title>
         <style>
             div.parentbox,
             div.parentbox div {
@@ -14,11 +14,11 @@
             }
             div.parentbox {
                 margin: 0 auto;
+                position: relative;
                 width: 360px;
             }
             div.parentbox div {
                 background-color: #fff5;
-                display: inline-block;
                 font-size: 4rem;
                 height: 76px;
                 line-height: 4.3rem;
@@ -26,30 +26,24 @@
                 text-align: center;
                 width: 74px;
             }
-            div.parentbox div.box4 {
-                width: 311px;
-            }
-            div.parentbox div.box2 {
-                background-color: #0e7d81;
-                position: relative;
-                top: 50px;
-                left: 50px;
+            div.parentbox div.box1 {
+                background-color: #a0050555;
+                float: right;
             }
         </style>
     </head>
     <body>
         <main>
             <header>
-                <h1><a href="index.html">⬅</a>Position Relative</h1>
+                <h1><a href="index.html">⬅</a>Position Float</h1>
             </header>
             <section>
                 <div class="parentbox">
                     <div class="box1">😈</div>
                     <div class="box2">🤡</div>
                     <div class="box3">🤠</div>
-                    <div class="box4">👻</div>
                 </div>
             </section>
         </main>
     </body>
-</html>
+</html> 
