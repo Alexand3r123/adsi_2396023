@@ -21,6 +21,7 @@ main {
 header h1 {
     background-color: #ffffff66;
     border-bottom: 4px solid #013152;
+    border-radius: 10px;
     color: #333;
     padding: 2rem;
     font-weight: 500;
@@ -29,6 +30,7 @@ header h1 {
 
 header h1 a:link,
 header h1 a:visited {
+    border-radius: 10px;
     background-color: #00000099;
     color: #fff;
     float: left;
@@ -48,4 +50,11 @@ section {
     color: #333;
     padding: 2rem;
     min-height: 20rem;
+    border-radius: 10px;
+}
+
+section h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #333;
 }

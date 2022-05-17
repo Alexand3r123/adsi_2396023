@@ -16,6 +16,7 @@ main {
 
 header h1 {
     background-color: #ffffff66;
+    border-radius: 10px;
     border-bottom: 4px solid #013152;
     color: #333;
     padding: 2rem;
@@ -36,7 +37,8 @@ nav li {
 nav li a:link,
 nav li a:visited {
     background-color: #00000066;
-    color: #fff;
+    border-radius: 10px;
+    color: #ffffff;
     display: flex;
     flex-direction: row;
     text-decoration: none;
@@ -45,8 +47,9 @@ nav li a:visited {
 }
 
 nav li a i {
-    background-color: #0170ba;
-    color: #fff;
+    background-color: #ececec;
+    color: #000000;
+    border-radius: 10px;
     padding: 0.8rem;
     font-weight: 500;
     font-size: 1.2rem;
@@ -60,10 +63,10 @@ nav li a i {
 
 nav li a:hover {
     background-color: #000000aa;
-    color: #0170ba;
+    color: #ffffff;
 }
 
 nav li a:hover i {
-    color: #fff;
+    color: #d40b0b;
     transform: scale(1.35);
 }
