@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Sprites</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        body {
+            background-color: #17a053;
+            border: 10px solid #fff;
+            margin: 0;
+        }
+
+        main header div.logo {
+            background: url(images/spriteweb.png) no-repeat -20px -400px;
+            height: 180px;
+            margin: 0px auto;
+            width: 180px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        header {
+            margin: 0rem;
+        }
+
+        header nav {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header nav a:link,
+        header nav a:visited {
+            background-color: #00000066;
+            color: #fff;
+            padding: 1rem 3rem;
+            text-decoration: none;
+            border-bottom: 6px solid #fff;
+        }
+
+        header nav a:hover {
+            background-color: #161616bb;
+            border-bottom: 6px solid #ddbc16;
+            cursor: pointer;
+        }
+
+        main section.images {
+            background-color: #00000066;
+            margin: 35px auto;
+            width: 1140px;
+        }
+
+        main section.images div {
+            background: url(images/spriteweb.png) no-repeat -465px 46px;
+            width: 140px;
+            padding: 99px;
+            height: 61px;
+            cursor: pointer;
+            display: inline-block;
+            margin: -30px 0px 20px 30px;
+        }
+
+        main section.images div:first-child {
+            margin-right: 2px;
+        }
+
+        main section.images div h3 {
+            background-color: #ffffff4f;
+            margin: 210px 0px 565px -93px;
+            text-align: center;
+            font-size: 1.3rem;
+            padding: 25px 52px;
+            position: absolute;
+            width: 220px;
+            bottom: 0;
+        }
+
+        main section.images div h3:hover {
+            background-color: #ffffffc2;
+            cursor: pointer;
+        }
+
+        /* CONTENIDO */
+        main section.contenido {
+            background-color: #00000066;
+            margin: 30px auto;
+            padding: 20px;
+            width: 1115px; 
+        }
+        main section.contenido article {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 25px;
+        }
+        main section.contenido article:hover {
+            cursor: pointer;
+            color: #17a053;
+        }
+        main section.contenido article div {
+            display: inline-block;
+            vertical-align: top;
+        }
+        main section.contenido article div.imagen1,
+        main section.contenido article div.imagen2 {
+            height: 155px;
+            width: 210px;
+        }
+        main section.contenido article div.texto {
+            text-align: justify;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            width: 600px;
+        }
+        main section.contenido article div.imagen1 {
+            margin-top: 30px;
+            background: url(images/spriteweb.png) no-repeat -230px -489px;
+        }
+        main section.contenido article div.imagen2 {
+            background: url(images/spriteweb.png) no-repeat 10px -220px;
+        }
+
+        /* Pie de pagina */
+        footer {
+            background-color: #fff;
+            margin: 45px auto;
+            padding: 30px;
+            width: 1115px; 
+        }
+
+        footer div.imagef {
+            background: url(images/spriteweb.png) no-repeat -500px -430px;
+            height: 250px;
+            margin: 15px auto;
+            width: 260px;
+        }
+        footer nav {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+        footer nav a:link,
+        footer nav a:visited {
+            background-color: #fff;
+            font-size: 1.2rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #000000;
+            padding: 1rem 3rem;
+            text-decoration: none;
+            border-bottom: 8px solid #fff;
+        }
+        footer nav a:hover {
+            background-color: #ffffffbb;
+            border-bottom: 6px solid #117e1a;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="logo"></div>
+            <nav>
+                <a href="#">INICIO</a>
+                <a href="#">NOSOTROS</a>
+                <a href="#">PORTAFOLIO</a>
+                <a href="#">SERVICIOS</a>
+                <a href="#">CONTACTO</a>
+            </nav>
+        </header>
+        <section class="images">
+            <div class="images1">
+                <h3>Sprite 01</h3>
+            </div>
+            <div class="images2">
+                <h3>Sprite 02</h3>
+            </div>
+            <div class="images3">
+                <h3>Sprite 03</h3>
+            </div>
+        </section>
+
+        <section class="contenido">
+            <article>
+                <div class="imagen1"></div>
+                <div class="texto">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta molestias veritatis ducimus eius cumque tempore eaque laudantium provident possimus, quis adipisci eligendi labore eos, sit, maiores ad minus velit fuga voluptas. Labore temporibus cupiditate in accusamus eveniet beatae explicabo, corrupti iste odio, voluptates aut similique laboriosam nemo nam ea.
+                </div>
+                <div class="imagen2"></div>
+            </article>
+            <article>
+                <div class="imagen1"></div>
+                <div class="texto">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta molestias veritatis ducimus eius cumque tempore eaque laudantium provident possimus, quis adipisci eligendi labore eos, sit, maiores ad minus velit fuga voluptas. Labore temporibus cupiditate in accusamus eveniet beatae explicabo, corrupti iste odio, voluptates aut similique laboriosam nemo nam ea.
+                </div>
+                <div class="imagen2"></div>
+            </article>
+            <article>
+                <div class="imagen1"></div>
+                <div class="texto">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta molestias veritatis ducimus eius cumque tempore eaque laudantium provident possimus, quis adipisci eligendi labore eos, sit, maiores ad minus velit fuga voluptas. Labore temporibus cupiditate in accusamus eveniet beatae explicabo, corrupti iste odio, voluptates aut similique laboriosam nemo nam ea.
+                </div>
+                <div class="imagen2"></div>
+            </article>
+        </section>
+
+        <footer>
+            <div class="imagef"></div>
+            <nav>
+                <a href="#">INICIO</a>
+                <a href="#">NOSOTROS</a>
+                <a href="#">PORTAFOLIO</a>
+                <a href="#">SERVICIOS</a>
+                <a href="#">CONTACTO</a>
+            </nav>
+        </footer>
+    </main>
+</body>
+</html>
