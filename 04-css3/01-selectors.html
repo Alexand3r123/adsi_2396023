@@ -86,6 +86,24 @@
         #contact:target {
             display: block;
         }
+
+        article {
+            text-align: justify;
+        }
+
+        article p:first-child::selection {
+            background-color: rgb(209, 198, 43);
+        }
+
+        article p:nth-child(2)::selection {
+            background-color: rgb(22, 39, 190);
+            color: #fff;
+        }
+
+        article p:last-child::selection {
+            background-color: rgb(209, 43, 43);
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -205,6 +223,35 @@
                 <h4>Contact</h4>
                 <img src="http://placekitten.com/310/204">
             </div>
+            <div id="home">
+                <h3>HOME</h3>
+                <img src="http://placekitten.com/300/205">
+            </div>
+            <div id="services">
+                <h3>SERVICES</h3>
+                <img src="http://placekitten.com/300/207">
+            </div>
+            <div id="contact">
+                <h3>CONTACT</h3>
+                <img src="http://placekitten.com/300/208">
+            </div>
+            <h3>::selection</h3>
+            <article>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, enim eum odio illum molestiae,
+                    veritatis esse sunt nobis dolorem facere tempore commodi sit sint nihil.
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, enim eum odio illum molestiae,
+                    veritatis esse sunt
+                    nobis dolorem facere tempore commodi sit sint nihil.
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, enim eum odio illum molestiae,
+                    veritatis esse sunt
+                    nobis dolorem facere tempore commodi sit sint nihil.
+                </p>
+            </article>
         </section>
     </main>
 </body>
