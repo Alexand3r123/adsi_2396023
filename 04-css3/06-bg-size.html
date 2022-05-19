@@ -7,6 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background Size</title>
     <link rel="stylesheet" href="css/master.css">
+    <style>
+        div.box {
+            background: url(images/tanjiro-kamado.jpg) #fff no-repeat center;
+            border: 2px dotted #333;
+            height: 280px;
+
+        }
+
+        div.box1 {
+            background-size: contain;
+        }
+
+        div.box2 {
+            background-size: cover;
+        }
+
+        div.box3 {
+            background-size: 150%;
+        }
+
+        div.box4 {
+            background-size: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,6 +39,17 @@
             <h1><a href="index.html">⬅</a>Background Size</h1>
         </header>
         <section>
+            <h3>Background-size: contain</h3>
+            <div class="box box1"></div>
+
+            <h3>Background-size: cover</h3>
+            <div class="box box2"></div>
+
+            <h3>Background-size: 150%</h3>
+            <div class="box box3"></div>
+
+            <h3>Background-size: 100%</h3>
+            <div class="box box4"></div>
 
         </section>
     </main>
