@@ -6,7 +6,7 @@ body {
 
 main {
     width: 1280px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 header div.logo {
@@ -25,15 +25,14 @@ section.images div {
     display: inline-block;
     background-size: cover;
     background-position: center center;
-    height: 280px;
-    margin-right: 30px;
+    height: 290px;
+    margin-right: 28px;
+    position: relative;
     width: 280px;
 }
 
-
-
 section.images div:first-child {
-    margin-left: 30px;
+    margin-left: 28px;
 }
 
 section.images div:last-child {
@@ -62,16 +61,16 @@ section.images div:last-child {
 
 section.images div p {
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    bottom: 329px;
-    font-size: 1.45em;
-    height: 20px;
-    margin: -1px;
+    color: rgba(255,255,255, .8);
+    bottom: 0px;
+    font-size: 1.4rem;
+    height: 15px;
+    margin: 0px;
     padding: 20px;
     position: absolute;
     text-align: center;
-    width: 241px;
-    transition: all 0.5s;
+    width: 240px;
+    transition: all 0.4s;
 }
 
 section.images div:hover {
@@ -83,14 +82,14 @@ section.images div:hover p {
 }
 
 footer {
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 footer article {
-    border: 1px dashed rgba(0, 0, 0, 0.5);
-    height: 300x;
+    border: 1px dashed rgba(0,0,0,0.5);
+    height: 280px;
     position: relative;
-    margin: 60px 19px;
+    margin: 50px 28px;
 }
 
 footer article.articulo1 figure {
@@ -98,7 +97,16 @@ footer article.articulo1 figure {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px;
-    height: 270px;
+    height: 280px;
+    width: 250px;
+}
+
+footer article.articulo2 figure {
+    background-image: url(../images/Vegeta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    height: 280px;
     width: 250px;
 }
 
@@ -115,75 +123,91 @@ footer article div {
 footer article div {
     margin-left: 28px;
     width: 600px;
+}
+
+footer article div h2 {
+    color: #000;
+    font-size: 2rem;
+    margin: 20px 0px;
+}
+
+footer article div p {
+    color: rgba(19, 19, 19, 0.5);
+    line-height: 1.4em;
     text-align: justify;
 }
 
-footer article.articulo2 figure {
-    background-image: url(../images/Vegeta.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0px;
-    height: 270px;
-    width: 250px;
-}
-
-/* ------------------------------- */
-
-@media (max-width:960px) {
+       /* Responsive */
+       
+@media (max-width: 1290px) {
     main {
-        width: 250px;
-        margin: 0 auto;
+        width: 680px;
     }
 
     header div.logo {
-        background-size: 310px;
-        background-position: cover;
-        height: 150px;
-        width: 310px;
-    }
-
-    section.images div:first-child {
-        margin-left: 0px;
+        background-size: 100%;
     }
 
     section.images div {
-        background-size: cover;
-        position: relative;
-        background-position: center center;
-        height: 280px;
+        margin: 28px;
+    }
+
+    footer article div {
+        width: 280px;
+    }
+
+    footer article div h2 {
+        font-size: 1.4rem;
+    }
+
+    footer article div p {
+        overflow: auto;
+        height: 180px;
+    }
+}
+
+     /* Responsive */
+
+@media (max-width: 690px) {
+    
+    main {
+        width: 480px;
+    }
+
+    section.images div {
+        display: block;
+        margin: 28px auto;
+        margin-left: 20px;
+        width: 90%;
+        height: 340px;
+    }
+
+    section.images div:first-child {
+        margin-left: 20px;
     }
 
     section.images div p {
-        bottom: 0px;
-        font-size: 1.45em;
         height: 20px;
-        margin: -1px;
-        padding: 20px;
+        width: 392px;
     }
 
     footer article {
-        border: 1px dashed rgba(0, 0, 0, 0.5);
-        height: 600x;
-        position: relative;
-        width: 300px;
-        margin: 60px 19px;
+        height: 560px;
+        margin: 40px auto;
+        width: 90%;
     }
 
-    footer article.articulo1 figure {
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0px;
-        height: 300px;
-        width: 300px;
+    footer article figure {
+        background-size: 180%;
     }
 
+    footer article figure,
+    footer article div {
+        display: block;
+        width: 100%;
+    }
 
-
-
-
-
-
-
-
-
+    footer article div {
+        margin-left: 0px;
+    }
 }
