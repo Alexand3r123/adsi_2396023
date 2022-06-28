@@ -61,7 +61,7 @@ section.images div:last-child {
 
 section.images div p {
     background-color: rgba(0, 0, 0, 0.5);
-    color: rgba(255,255,255, .8);
+    color: rgba(255, 255, 255, .8);
     bottom: 0px;
     font-size: 1.4rem;
     height: 15px;
@@ -86,7 +86,7 @@ footer {
 }
 
 footer article {
-    border: 1px dashed rgba(0,0,0,0.5);
+    border: 1px dashed rgba(0, 0, 0, 0.5);
     height: 280px;
     position: relative;
     margin: 50px 28px;
@@ -137,8 +137,8 @@ footer article div p {
     text-align: justify;
 }
 
-       /* Responsive */
-       
+/* Responsive */
+
 @media (max-width: 1290px) {
     main {
         width: 680px;
@@ -166,10 +166,10 @@ footer article div p {
     }
 }
 
-     /* Responsive */
+/* Responsive */
 
 @media (max-width: 690px) {
-    
+
     main {
         width: 480px;
     }
