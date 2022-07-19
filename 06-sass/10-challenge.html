@@ -6,30 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/10-challenge.scss">
+    <link rel="stylesheet" href="css/10-challenge.css">
     <title>Challenge</title>
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="h1">
-            <a href="#" class="a">Menú</a>
-        </h1>
+    <nav class="nav">
+        <h1 class="nav_logo">Menú Hamburguesa</h1>
 
-        <button class="button">
-            svg
-        </button>
+        <a href="#menu" class="nav_target">
+            <img src="imgs/menu.svg" class="nav_icon" width="75px" height="80px">
+        </a>
 
-        <nav class="nav">
-            <ul class="ul">
-                <li class="li"><a href="#" class="a"></a>Items 1</li>
-                <li class="li"><a href="#" class="a"></a>Items 2</li>
-                <li class="li"><a href="#" class="a"></a>Items 3</li>
-                <li class="li"><a href="#" class="a"></a>Items 5</li>
-                <li class="li"><a href="#" class="a"></a>Items 6</li>
-            </ul>
-        </nav>
-    </header>
-
+        <div class="nav_links" id="menu">
+            <a href="#" class="nav_link">Inicio</a>
+            <a href="#" class="nav_link">Contacto</a>
+            <a href="#" class="nav_link">Nosotros</a>
+            <a href="#" class="nav_link">Ubicación</a>
+        </div>
+    </nav>
 </body>
 
 </html>

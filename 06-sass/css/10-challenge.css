@@ -1,0 +1,31 @@
+.nav {
+    padding: 0 40px;
+    height: 80px;
+    background-color: aqua;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_links {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 80px;
+    right: 0;
+    background-color: #11001C;
+    display: grid;
+    place-items: center;
+    clip-path: circle(0% at top left);
+    transition: clip-path .4s;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav_links:target {
+    clip-path: circle(150% at top left);
+}
