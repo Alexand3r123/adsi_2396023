@@ -11,5 +11,6 @@ Theme | Description | Link
 | 5. PUG        | Preprocessor (HTML)               | [open folder](05-pug/)        |
 | 6. SASS       | Preprocessor (CSS)                | [open folder](06-sass/)       |
 | 7. Javascript | Programming Lamguage (Clien-Side) | [open folder](06-javascript/) |
+| 8. CMS        | Content Management System (wp)    | [open folder](08-cms/) |
 
 ![imagen](https://assets.xboxservices.com/assets/86/7a/867ad3b7-6358-4f6d-ae0b-c3de8aa548c4.jpg?n=Minecraft_Sneaky-Slider-1084_World-Warrior_1600x675_01.jpg)
