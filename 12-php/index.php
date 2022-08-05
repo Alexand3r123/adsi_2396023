@@ -16,7 +16,7 @@
                 <?php echo "<h1 class='text-center my-5'>Main Menu (PHP) </h1>"; ?>
                 <hr>
                 <div class="list-group">
-                  <a href="01-hello-world"  class="list-group-item list-group-item-action">
+                  <a href="01-hello-world.php"  class="list-group-item list-group-item-action">
                     <span class="badge rounded-pill bg-dark">01</span> Hello World 
                 </a>
                 <a href="02-php-info"  class="list-group-item list-group-item-action">
