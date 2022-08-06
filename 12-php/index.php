@@ -19,13 +19,13 @@
                   <a href="01-hello-world.php"  class="list-group-item list-group-item-action">
                     <span class="badge rounded-pill bg-dark">01</span> Hello World 
                 </a>
-                <a href="02-php-info"  class="list-group-item list-group-item-action">
+                <a href="02-info"  class="list-group-item list-group-item-action">
                     <span class="badge rounded-pill bg-dark">02</span> Php Info 
                 </a>
                 <a href="03-comments"  class="list-group-item list-group-item-action">
                     <span class="badge rounded-pill bg-dark">03</span> Comments
                 </a>
-                <a href="04-Variables"  class="list-group-item list-group-item-action">
+                <a href="04-variables"  class="list-group-item list-group-item-action">
                     <span class="badge rounded-pill bg-dark">04</span> Variables
                 </a>
                 <a href="05-Strings"  class="list-group-item list-group-item-action">
