@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Elements</title>
+    <link rel="stylesheet" href="/07-javascript/css/menu.css">
+    <style>
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        nav button {
+            background-color: #0006;
+            color: #ffe600;
+            font-family: Poppins;
+            height: 40px;
+            width: 100px;
+            border: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                      </svg>
+                </a>
+                Get Elements
+                
+            </h1>
+        </header>
+        <section>
+            <h2 id="show-year"></h2>
+            <ul >
+                <li>Bulbasaur</li>
+                <li>Squirtle</li>
+                <li>Charmander</li>
+            </ul>
+
+            <h2 id="show-pks"></h2>
+            <p class="paragraph">lorem ipsum dolor</p>
+            <p class="paragraph">lorem ipsum dolor</p>
+            <h2 id="show-prs"></h2>
+        </section>
+        <nav>
+            <button class="btn btn1">Button 1</button>
+            <button class="btn btn2">Button 2</button>
+            <button class="btn btn3">Button 3</button>
+        </nav>
+    </main>
+    <script>
+        // Change DOM (Document Object Model) getElementById
+        const show_year = document.getElementById ('show-year')
+        const show_pks  = document.getElementById('show-pks')
+        const show_prs  = document.getElementById('show-prs')
+        let today       = new Date
+        show_year.textContent = 'Current Year:'+ today.getFullYear()
+        // getElementsByTagName
+        const num_pks   = document.getElementsByTagName('li')
+        show_pks.textContent = `There are ${num_pks.length} pokemons`
+        show_pks.textContent += `Last pokemon is: ${num_pks[num_pks.length-1].textContent}`
+        // getElementByClassName
+        const num_prs = document.getElementsByClassName('paragraph')
+        num_prs[num_prs.length-1].style.color = 'red'
+        show_prs.textContent = `Paragraphs contain class: ${num_prs[0].className}` 
+        // querySelector / querySelectorAll
+        const btn2 = document.querySelector('button.btn2')
+        const all_btns = document.querySelectorAll('button.btn')
+        btn2.style.backgroundColor = 'grey'
+
+        all_btns.forEach(element => {
+            element.style.borderRadius = '10px 0px'
+        })
+        
+
+        
+    </script>
+    
+</body>
+</html>
