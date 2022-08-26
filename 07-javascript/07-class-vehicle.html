@@ -7,10 +7,76 @@
     <title>Class Vehicle</title>
     <link rel="stylesheet" href="css/menu.css">
     <style> 
-        main {
-            border: 6px solid rgb(145, 148, 4);
-            background: url(images/vehicle/bg.svg) no-repeat center;
+        /* Dark Mode */
+        main.dark {
+            background: url(images/vehicle/bg-dark.svg) no-repeat center;
+        }
+        main.dark section button.btn_mode {
+            background: url(images/vehicle/btn-light.svg) no-repeat center;
+            width: 90px;
+            height: 100px;
+        }
+        main.dark header h1 a:is(:link,:visited:focus),
+        main.dark header h1,
+        main.dark h2,
+        main.dark div.attributes {
+            color: #fff;
+        }
+        main.dark div.attributes div.brand {
+            background: url(images/vehicle/brand-dark.svg) no-repeat center;
+        }
+        main.dark div.attributes div.refer {
+            background: url(images/vehicle/refer-dark.svg) no-repeat center;
+        }
+        main.dark div.attributes div.model {
+            background: url(images/vehicle/model-dark.svg) no-repeat center;
+        }
+        main.dark div.attributes div.color {
+            background: url(images/vehicle/color-dark.svg) no-repeat center;
+        }
+        main.dark figure.landscape {
+            background: url(images/vehicle/fondo-noche.svg)no-repeat center;
+        }
+        main.dark figure.landscape button.prev {
+            background: url(images/vehicle/btn-prev-dark.svg) no-repeat center;
+        }
+        main.dark figure.landscape button.next {
+            background: url(images/vehicle/btn-next-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.on {
+            background: url(images/vehicle/btn-on-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw {
+            background: url(images/vehicle/btn-fw-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop {
+            background: url(images/vehicle/btn-stop-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw {
+            background: url(images/vehicle/btn-bw-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.off {
+            background: url(images/vehicle/btn-off-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.on.active {
+            background: url(images/vehicle/btn-on-dark-act.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw.active {
+            background: url(images/vehicle/btn-fw-dark-act.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop.active {
+            background: url(images/vehicle/btn-stop-dark-act.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw.active {
+            background: url(images/vehicle/btn-bw-dark-act.svg) no-repeat center;
+        }
+        main.dark div.methods button.off.active {
+            background: url(images/vehicle/btn-off-dark-act.svg) no-repeat center;
+        }
 
+        main {
+            background: url(images/vehicle/bg.svg) no-repeat center;
+            transition: all 0.4s ease-in;
         }
 
         header h1 a:is(:link,:visited:focus), 
@@ -26,19 +92,19 @@
             position: relative;
         }
 
-        section button.dark {
-            background: url(images/vehicle/dark.svg);
+        section button.btn_mode {
+            background: url(images/vehicle/dark.svg)no-repeat center;
             border: none;
             cursor: pointer;
             height: 66px;
             position: absolute;
-            top: -80px;
-            right: 10px;
-            width: 62px;
+            top: -75px;
+            right: 15px;
+            width: 68px;
             transition: transform 0.2s ease-in;
         }
 
-        section button.btn__dark:is(:hover) {
+        section button.btn__mode:is(:hover) {
             transform: scale(0.9);
         }
 
@@ -62,12 +128,12 @@
 
         main h2.subtitle2 {
             color: #2e2d2d;
-            top: 440px;
+            top: 460px;
         }
 
         div.attributes {
             color: #000;
-            margin: 10px auto;
+            margin: 22px auto;
             font-size: 14px;
             font-weight: 500;
             display: grid;
@@ -100,7 +166,7 @@
             background: url(images/vehicle/Color.svg);
         }
         figure.landscape {
-            background-color: #D9D9D9;
+            background: url(images/vehicle/fondo-day.svg)no-repeat center;
             border-radius: 6px;
             display: flex;
             justify-content: space-between;
@@ -126,15 +192,21 @@
             transform: translateX(2px);
         }
         figure.landscape button.prev {
-            background: url(images/vehicle/prev.svg);
+            background: url(images/vehicle/prev.svg)no-repeat center;
         }
 
         figure.landscape button.next {
-            background: url(images/vehicle/next.svg);
+            background: url(images/vehicle/next.svg)no-repeat center;
+        }
+
+        figure.landscape img.car {
+            position: relative;
+            bottom: -60px;
+            width: 170px;
         }
 
         div.methods {
-            margin: 60px auto 0 auto;
+            margin: 40px auto 0 auto;
             height: 50px;
             width: 360px;
             display: flex;
@@ -148,6 +220,7 @@
             height: 50px;
             width: 50px;
             transition: transform 0.2s ease-in;
+            background: url(images/vehicle/car1.png);
         }
 
         div.methods button:is(:hover) {
@@ -156,42 +229,66 @@
 
         div.methods button:is(:hover) {
             transform: scale(0.9);
+            
         }
 
         div.methods button.on {
-            background: url(images/vehicle/Arrancar.svg);
+            background: url(images/vehicle/on.svg) no-repeat center;
         }
-        div.methods button.adelante {
-            background: url(images/vehicle/Adelante.svg);
+        div.methods button.fw {
+            background: url(images/vehicle/btn-fw.svg) no-repeat center;
         }
         div.methods button.stop {
-            background: url(images/vehicle/Stop.svg);
-            height: 108px;
+            background: url(images/vehicle/btn-stop.svg) no-repeat center;
+            height: 100px;
         }
-        div.methods button.atras {
-            background: url(images/vehicle/Atras.svg);
+        div.methods button.bw {
+            background: url(images/vehicle/btn-bw.svg) no-repeat center;
         }
-        div.methods button.apagar {
-            background: url(images/vehicle/Off.svg);
+        div.methods button.off {
+            background: url(images/vehicle/btn-off.svg) no-repeat center;
         }
 
         /* Actives */
 
         div.methods button.on.active {
-            background: url(images/vehicle/Arrancar-act.svg) no-repeat center;
+            background: url(images/vehicle/on-act.svg) no-repeat center;
         }
-        div.methods button.adelante.active {
-            background: url(images/vehicle/Adelante-act.svg) no-repeat center;
+        div.methods button.fw.active {
+            background: url(images/vehicle/btn-fw-act.svg) no-repeat center;
         }
         div.methods button.stop.active {
-            background: url(images/vehicle/Stop-act.svg) no-repeat center;
-            height: 108px;
+            background: url(images/vehicle/btn-stop-act.svg) no-repeat center;
+            height: 100px;
         }
-        div.methods button.atras.active {
-            background: url(images/vehicle/Atras-act.svg) no-repeat center;
+        div.methods button.bw.active {
+            background: url(images/vehicle/btn-bw-act.svg) no-repeat center;
         }
-        div.methods button.apagar.active {
-            background: url(images/vehicle/Off-act.svg) no-repeat center;
+        div.methods button.off.active {
+            background: url(images/vehicle/btn-off-act.svg) no-repeat center;
+        }
+        
+
+        main.animate {
+            animation: animMain 0.2s ease-in 1;
+        }
+        @keyframes animMain {
+            0%  { 
+                transform: scale(1);
+            }
+            50%  { 
+                transform: scale(0.9);
+            }
+            100% { 
+                transform: scale(1);
+            }
+        }
+        img.car.on {
+             animation: animCar 0.1s linear infinite;
+        }
+        @keyframes animCar {
+            0%, 100% { transform: translateY(0); }
+            5%       { transform: translateY(-4px); }
         }
     </style>
 </head>
@@ -208,62 +305,78 @@
             </h1>
         </header>
         <section>
-            <button class="dark"></button>
+            <button class="btn_mode"></button>
             <h2 class="subtitle1">Attributes:</h2>
             <div class="attributes">
-            <div class="brand"></div>
-            <div class="refer"></div>
-            <div class="model"></div>
-            <div class="color"></div>
+                <div class="brand"></div>
+                <div class="refer"></div>
+                <div class="model"></div>
+                <div class="color"></div>
+                
             </div>
             <figure class="landscape">
                 <button class="prev"></button>
+                <img src="" class="car">
                 <button class="next"></button>
             </figure>
             <h2 class="subtitle2">Methods:</h2>
             <div class="methods">
                 <button class="on"></button>
-                <button class="adelante"></button>
+                <button class="fw"></button>
                 <button class="stop"></button>
-                <button class="atras"></button>
-                <button class="apagar active"></button>
+                <button class="bw"></button>
+                <button class="off active"></button>
             </div>
         </section>  
     </main>
     <script>
-        const on = document.querySelector('.on')
-        const adelante = document.querySelector('.adelante')
-        const stop = document.querySelector('.stop')
-        const atras = document.querySelector('.atras')
-        const apagar = document.querySelector('.apagar')
-        const methods = document.querySelector('.methods button')
+         const main     = document.querySelector('main')
+        const btn_mode = document.querySelector('.btn_mode')
 
-        const e_brand = document.querySelector('brand')
-        const e_refer = document.querySelector('refer')
-        const e_model = document.querySelector('model')
-        const e_color = document.querySelector('color')
+        const btn_on   = document.querySelector('.on')
+        const btn_fw   = document.querySelector('.fw')
+        const btn_stop = document.querySelector('.stop')
+        const btn_bw   = document.querySelector('.bw')
+        const btn_off  = document.querySelector('.off')
+        const btns_methods = document.querySelectorAll('.methods button')
+
+        const e_brand  = document.querySelector('.brand') 
+        const e_refer  = document.querySelector('.refer') 
+        const e_model  = document.querySelector('.model') 
+        const e_color  = document.querySelector('.color')  
+        const e_image  = document.querySelector('.car')  
 
         var index_attr = 0
 
         const btn_prev = document.querySelector('.prev')
-        const btn_next = document.querySelector('.next') 
+        const btn_next = document.querySelector('.next')
 
+        // Logic 
+        var engine = false
+
+        // Array Object
         const vehicles = [
-            {
-                brand: 'Lamborghini',
-                refer: 'Gallardo',
-                model: 2014,
-                color: 'Negro',
-                image: 'image/Vehicle_car.png'
-            },
-            {
-                brand: 'Toyota',
-                refer: 'Raize',
-                model: 2020,
-                color: 'Azul',
-                image: 'image/Vehicle_car2.png'
-
-            }
+                { 
+                    brand: 'Lamborghini',
+                    refer: 'Gallardo',
+                    model: 2014,
+                    color: 'Negro',
+                    image: 'images/vehicle/car1.png'
+                },
+                { 
+                    brand: 'Toyota',
+                    refer: 'Raize',
+                    model: 2020,
+                    color: 'Azul',
+                    image: 'images/vehicle/car2.png' 
+                },
+                {
+                    brand: 'Renault',
+                    refer: 'Kwid',
+                    model: 2010,
+                    color: 'Aqua',
+                    image: 'images/vehicle/car3.png'
+                }
         ]
         class Vehicle {
             constructor(brand, refer, model, color, image) {
@@ -274,69 +387,93 @@
                 this.image = image
             }
             getInfo() {
-                //return `The brand is: $(this.brand)`
+                //return `The brand is: ${this.brand}`
                 e_brand.textContent = this.brand
                 e_refer.textContent = this.refer
                 e_model.textContent = this.model
                 e_color.textContent = this.color
+                e_image.setAttribute('src', this.image)
+            }
+            static startEngine() {
+                if (!engine) {
+                    e_image.classList.add('on')
+                    engine = true
+                }
+            }
+            static offEngine() {
+                if(engine) {
+                    e_image.classList.remove('on')
+                    engine = false
+                }
             }
         }
-
-        //Acciones
-
-        on.addEventListener('click', (event) => {
+        // Actions
+        btn_mode.addEventListener('click', e=> {
+            e.preventDefault()
+            e.stopPropagation()
+            main.classList.toggle('dark')
+        })
+        btn_on.addEventListener('click', (event) => {
             removeActives()
+            Vehicle.startEngine()
             btn_on.classList.add('active')
         })
-
-        adelante.addEventListener('click', (event) => {
+        btn_fw.addEventListener('click', (event) => {
             removeActives()
-            btn_adelante.classList.add('active')
+            btn_fw.classList.add('active')
         })
-
-        stop.addEventListener('click', (event) => {
+        btn_stop.addEventListener('click', (event) => {
             removeActives()
-            stop.classList.add('active')
+            btn_stop.classList.add('active')
         })
-
-        atras.addEventListener('click', (event) => {
+        btn_bw.addEventListener('click', (event) => {
             removeActives()
-            atras.classList.add('active')
+            btn_bw.classList.add('active')
         })
-
-        apagar.addEventListener('click', (event) => {
+        btn_off.addEventListener('click', (event) => {
             removeActives()
-            apagar.classList.add('active')
+            Vehicle.offEngine()
+            btn_off.classList.add('active')
         })
         btn_prev.addEventListener('click', (event) => {
             if (index_attr > 0) {
                 index_attr--
+                animateMain()
                 showAttributes()
             }
         })
-        btn_next.addEventListener(click, (event) => {
-            if (index_attr < vehicles.legth-1) {
+        btn_next.addEventListener('click', (event) => {
+            if (index_attr < vehicles.length-1) {
                 index_attr++
+                animateMain()
                 showAttributes()
             }
         })
+        // Functions
+        function animateMain() {
+            main.classList.add('animate')
+            setTimeout(() => {
+                main.classList.remove('animate')
+            }, 500)
+        }
         function removeActives() {
-            methods.forEach(element => {
+            btns_methods.forEach(element => {
                 element.classList.remove('active')
             })
         }
-        function  showAttributes () {
-        let vh = new Vehicle(vehicles[index_attr].brand,
-                               vehicles[index_attr].refer,
-                               vehicles[index_attr].model,
-                               vehicles[index_attr].color,
-                               vehicles[index_attr].image)
-
-        vh.getInfo()
-        //console.log(vh)
-        //console.log(vh.getInfo())
+        function showAttributes() {
+            // New Vehicle 
+            let vh = new Vehicle(vehicles[index_attr].brand, 
+                                 vehicles[index_attr].refer, 
+                                 vehicles[index_attr].model, 
+                                 vehicles[index_attr].color,
+                                 vehicles[index_attr].image)
+            // Access to Methods
+            vh.getInfo()
         }
         showAttributes()
+        //console.log(vh)
+        //console.log(vh.getInfo())
     </script>
 </body>
 </html>
