@@ -16,6 +16,14 @@
             width: 90px;
             height: 100px;
         }
+        main.dark h2.subtitle1{ 
+            color: #fff;
+        }
+
+        main.dark h2.subtitle2{ 
+            color: #fff;
+        }
+
         main.dark header h1 a:is(:link,:visited:focus),
         main.dark header h1,
         main.dark h2,
@@ -35,7 +43,6 @@
             background: url(images/vehicle/color-dark.svg) no-repeat center;
         }
         main.dark figure.landscape {
-            background: url(images/vehicle/fondo-noche.svg)no-repeat center;
         }
         main.dark figure.landscape button.prev {
             background: url(images/vehicle/btn-prev-dark.svg) no-repeat center;
@@ -166,10 +173,9 @@
             background: url(images/vehicle/Color.svg);
         }
         figure.landscape {
-            background: url(images/vehicle/fondo-day.svg)no-repeat center;
-            border-radius: 6px;
-            display: flex;
+            display: relative;
             justify-content: space-between;
+            z-index: 1;
             align-items: center;
             width: 380px; 
             margin: 0 auto;
@@ -290,6 +296,38 @@
             0%, 100% { transform: translateY(0); }
             5%       { transform: translateY(-4px); }
         }
+
+        figure.parallax {
+            margin: 0 auto;
+            position: absolute;
+            overflow: hidden;
+            height: 256px;
+            width: 375px;
+            border-radius: 10px;
+            left: 19px;
+            bottom: 110px;
+        }
+
+        figure.parallax div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 256px;
+            width: 738px;
+        }
+
+        figure.parallax div.layer1 {
+            background: url(images/vehicle/layer1.svg) repeat-x;
+            z-index: 3;
+        }
+        figure.parallax div.layer2 {
+            background: url(images/vehicle/layer2.svg) repeat-x;
+            z-index: 1;
+        }
+        figure.parallax div.layer3 {
+            background: url(images/vehicle/layer3.svg) repeat-x;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -312,8 +350,12 @@
                 <div class="refer"></div>
                 <div class="model"></div>
                 <div class="color"></div>
-                
             </div>
+            <figure class="parallax">
+                <div class="layer1"></div>
+                <div class="layer2"></div>
+                <div class="layer3"></div>
+            </figure>
             <figure class="landscape">
                 <button class="prev"></button>
                 <img src="" class="car">
