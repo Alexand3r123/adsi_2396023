@@ -7,8 +7,86 @@
     <title>Challenge Calculator</title>
     <link rel="stylesheet" href="css/menu.css">
     <style>
+        /*Light Mode */
+        main.light {
+            background: url(images/calculator/bg-light.svg) no-repeat center;
+        }
+        
+        main.light header button.mode {
+            background: url(images/calculator/mode-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.numero7 {
+            background: url(images/calculator/Numero7-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.numero8 {
+            background: url(images/calculator/Numero8-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.numero9 {
+            background: url(images/calculator/Numero9-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.division {
+            background: url(images/calculator/Division-light.svg) no-repeat center;
+
+        }
+        main.light div.buttons button.numero4 {
+            background: url(images/calculator/Numero4-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.numero5 {
+            background: url(images/calculator/Numero5-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.numero6 {
+            background: url(images/calculator/Numero6-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.multi {
+            background: url(images/calculator/Multiplicacion-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.numero1 {
+            background: url(images/calculator/Numero1-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.numero2 {
+            background: url(images/calculator/Numero2-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.numero3 {
+            background: url(images/calculator/Numero3-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.resta {
+            background: url(images/calculator/Resta-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.numero0 {
+            background: url(images/calculator/Numero0-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.punto {
+            background: url(images/calculator/Punto-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.suma {
+            background: url(images/calculator/Suma-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.igual {
+            background: url(images/calculator/Igual-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.clear{
+            background: url(images/calculator/Clear-light.svg) no-repeat center;
+        }
+        main.light div.buttons button.back {
+            background: url(images/calculator/borrar-light.svg) no-repeat center;
+        }
+
+        main.light div.display output.operationes {
+            font-weight: 275;
+            font-size: 28px;
+            color: #000;
+        }
+
+        main.light div.display output.result {
+            font-weight: 275;
+            font-size: 54px;
+            color: #c50303;
+        }
+
+        /*Dark Mode */
         main {
             background: url(images/calculator/bg-dark.svg) no-repeat center;
+            transition: background 0.5s ease-in;
         }
         header h1 a:is(:link) {
             color: #cbcddb;
@@ -32,12 +110,13 @@
             display: flex;
             flex-direction: column;
             margin: 30px 40px;
+            height: 124px;
             text-align: right;
         }
-        div.display output.operation {
+        div.display output.operationes {
             font-weight: 275;
             font-size: 28px;
-            color: #6E768A;
+            color: #fefefe;
         }
         div.display output.result {
             font-weight: 275;
@@ -58,12 +137,62 @@
             border: none;
             transition: all 0.2s ease-in;
         }
+
+        main div.buttons button.numero7 {
+            background: url(images/calculator/Numero7.svg) no-repeat center;
+        }
+        main div.buttons button.numero8 {
+            background: url(images/calculator/Numero8.svg) no-repeat center;
+        }
+        main div.buttons button.numero9 {
+            background: url(images/calculator/Numero9.svg) no-repeat center;
+        }
+        main div.buttons button.division {
+            background: url(images/calculator/Division.svg) no-repeat center;
+        }
+        main div.buttons button.numero4 {
+            background: url(images/calculator/Numero4.svg) no-repeat center;
+        }
+        main div.buttons button.numero5 {
+            background: url(images/calculator/Numero5.svg) no-repeat center;
+        }
+        main div.buttons button.numero6 {
+            background: url(images/calculator/Numero6.svg) no-repeat center;
+        }
+        main div.buttons button.multi {
+            background: url(images/calculator/Multiplicacion.svg) no-repeat center;
+        }
+        main div.buttons button.numero1 {
+            background: url(images/calculator/Numero1.svg) no-repeat center;
+        }
+        main div.buttons button.numero2 {
+            background: url(images/calculator/Numero2.svg) no-repeat center;
+        }
+        main div.buttons button.numero3 {
+            background: url(images/calculator/Numero3.svg) no-repeat center;
+        }
+        main div.buttons button.resta {
+            background: url(images/calculator/Resta.svg) no-repeat center;
+        }
+        main div.buttons button.numero0 {
+            background: url(images/calculator/Numero0.svg) no-repeat center;
+        }
+        main div.buttons button.punto {
+            background: url(images/calculator/Punto.svg) no-repeat center;
+        }
+        main div.buttons button.suma {
+            background: url(images/calculator/Suma.svg) no-repeat center;
+        }
+        main div.buttons button.igual {
+            background: url(images/calculator/Igual.svg) no-repeat center;
+        }
         div.buttons button.clear {
             background: url(images/calculator/Btn_Clear.svg) no-repeat center;
         }
         div.buttons button.back {
             background: url(images/calculator/Btn_borrar.svg) no-repeat center;
         }
+
         div.buttons button:is(:hover, :focus) {
             transform: scale(1.1);
         }
@@ -94,26 +223,26 @@
         </header>
         <section>
             <div class="display">
-                <output class="operation">10 + 10</output>
-                <output class="result">20</output>
+                <output class="operationes"></output>
+                <output class="result"></output>
             </div>
             <div class="buttons">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
+                <button class="numero7"  data-num="7"></button>
+                <button class="numero8"  data-num="8"></button>
+                <button class="numero9"  data-num="9"></button>
+                <button class="division" data-opr="/"></button>
+                <button class="numero4"  data-num="4"></button>
+                <button class="numero5"  data-num="5"></button>
+                <button class="numero6"  data-num="6"></button>
+                <button class="multi"    data-opr="*"></button>
+                <button class="numero1"  data-num="1"></button>
+                <button class="numero2"  data-num="2"></button>
+                <button class="numero3"  data-num="3"></button>
+                <button class="resta"    data-opr="-"></button>
+                <button class="numero0"  data-num="0"></button>
+                <button class="punto"    data-opr="."></button>
+                <button class="suma"     data-opr="+"></button>
+                <button class="igual"></button>
                 <button class="clear"></button>
                 <button class="back"></button>
 
@@ -121,6 +250,45 @@
         </section>
     </main>
     <script>
+        const mode = document.querySelector('.mode')
+        const main = document.querySelector('main')
+        const opert = document.querySelector('.operationes')
+        const limpiar = document.querySelector('.clear')
+        // Numbers & Operators
+        const nums = document.querySelectorAll("button[data-num]")
+        const operts = document.querySelectorAll("button[data-opr]")
+        // Logic
+        var opertStatus = false
+
+        nums.forEach(element => {
+            element.addEventListener('click', () => {
+            if (opert.textContent.length < 18) { 
+                opert.textContent += element.getAttribute('data-num')
+                opertStatus = true
+                }
+            })
+        });
+
+        operts.forEach(element => {
+            element.addEventListener('click', ()=> {
+              if(opert.textContent.length < 18) {
+                if(opertStatus) {
+                  opert.textContent += element.getAttribute('data-opr')
+                    opertStatus = false
+                    }       
+                }
+            })
+
+        });
+
+        limpiar.addEventListener('click', ()=> {
+            opert.textContent =''
+        })
+        
+        mode.addEventListener('click', ()=> {
+            main.classList.toggle('light')
+        })
+
 
     </script>
 </body>
