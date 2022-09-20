@@ -11,7 +11,6 @@
         main.light {
             background: url(images/calculator/bg-light.svg) no-repeat center;
         }
-        
         main.light header button.mode {
             background: url(images/calculator/mode-light.svg) no-repeat center;
         }
@@ -71,17 +70,17 @@
             background: url(images/calculator/borrar-light.svg) no-repeat center;
         }
 
-        main.light div.display output.operationes {
-            font-weight: 275;
-            font-size: 28px;
-            color: #000;
+        main.light div.display input.value{
+            background: none;
+            border: none;
+            color: #071553;
+            font-size: 2rem;
+            position: relative;
+            text-align: right;
+            top: 5px;
+            outline: none;
         }
 
-        main.light div.display output.result {
-            font-weight: 275;
-            font-size: 54px;
-            color: #c50303;
-        }
 
         /*Dark Mode */
         main {
@@ -113,16 +112,6 @@
             height: 124px;
             text-align: right;
         }
-        div.display output.operationes {
-            font-weight: 275;
-            font-size: 28px;
-            color: #fefefe;
-        }
-        div.display output.result {
-            font-weight: 275;
-            font-size: 54px;
-            color: #B6B9C7;
-        }
         div.buttons {
             display: grid;
             gap: 14px;
@@ -136,6 +125,17 @@
             cursor: pointer;
             border: none;
             transition: all 0.2s ease-in;
+        }
+
+        div.display input.value{
+            background: none;
+            border: none;
+            color: #c4c4c4;
+            font-size: 2rem;
+            position: relative;
+            text-align: right;
+            top: 5px;
+            outline: none;
         }
 
         main div.buttons button.numero7 {
@@ -224,6 +224,7 @@
         <section>
             <div class="display">
                 <output class="operationes"></output>
+                <input type="text" class="value" readonly>
                 <output class="result"></output>
             </div>
             <div class="buttons">
@@ -252,44 +253,135 @@
     <script>
         const mode = document.querySelector('.mode')
         const main = document.querySelector('main')
-        const opert = document.querySelector('.operationes')
-        const limpiar = document.querySelector('.clear')
+        var display = document.querySelector('input.value')
+        const back = document.querySelector('.back')
+        const clear = document.querySelector('.clear')
+        const btnigual = document.querySelector('.igual')
         // Numbers & Operators
-        const nums = document.querySelectorAll("button[data-num]")
-        const operts = document.querySelectorAll("button[data-opr]")
-        // Logic
-        var opertStatus = false
+        const nums = document.querySelectorAll('button[data-num]')
+        const btnsOperators = document.querySelectorAll('button[data-opr]')
 
-        nums.forEach(element => {
-            element.addEventListener('click', () => {
-            if (opert.textContent.length < 18) { 
-                opert.textContent += element.getAttribute('data-num')
-                opertStatus = true
-                }
-            })
-        });
+        var operStatus = false
+       //function
 
-        operts.forEach(element => {
-            element.addEventListener('click', ()=> {
-              if(opert.textContent.length < 18) {
-                if(opertStatus) {
-                  opert.textContent += element.getAttribute('data-opr')
-                    opertStatus = false
-                    }       
-                }
-            })
-
-        });
-
-        limpiar.addEventListener('click', ()=> {
-            opert.textContent =''
-        })
-        
-        mode.addEventListener('click', ()=> {
+       mode.addEventListener('click', ()=> {
             main.classList.toggle('light')
         })
 
+       function deletLastValue() {
+            display.value= display.value.slice(0,-1)
+            if ((isNaN(display.value.slice(-1)))) {
+                operStatus=false
+            }
+            else {
+                operStatus=true
+            }display.value= display.value.slice(0,-1)
+            if ((isNaN(display.value.slice(-1)))) {
+                operStatus=false
+            }
+            else {
+                operStatus=true
+            }
+        }
+        function validateLength() {
+            if(display.value.length < 55 ){
+                return true
+            } else {
+                return false
+            }
+        };
+        function addToDisplay(c) {
+            if(validateLength()) {
+                display.value+=c
+            }
+        };
+        function clearDisplay(){
+            display.value=''
+            operStatus=false
+        }
+        function igual() {
+            display.value=(eval(display.value))
+        }
 
+        document.onkeyup = (evt) => {
+            switch (evt.keyCode) {
+                case 8:
+                    deletLastValue()
+                case 96:
+                case 48:
+                    display.value += 0
+                    break;
+                case 97:
+                case 49:
+                    display.value += 1
+                    break;
+                case 98:
+                case 50:
+                    display.value += 2
+                    break;
+                case 99:
+                case 51:
+                    display.value += 3
+                    break;
+                case 100:
+                case 52:
+                    display.value += 4
+                    break;
+                case 101:
+                    display.value += 5
+                    break;
+                case 53:
+                    display.value += 5
+                    break;
+                case 102:
+                case 54:
+                    display.value += 6
+                    break;
+                case 103:
+                case 55:
+                    display.value += 7
+                    break;
+                case 104:
+                case 56:
+                    display.value += 8
+                    break;
+                case 105:
+                case 57:
+                    display.value += 9
+                    break;
+                default:
+                    break;
+            }
+        }
+        //action
+        clear.onclick=()=> {
+            display.value=''
+            operStatus=false
+            
+        }
+        back.onclick=()=> {
+            deletLastValue()
+        }
+        btnigual.onclick=()=> {
+            igual()
+        }
+        for (let i = 0; i < nums.length; i++) {
+            nums[i].onclick =function() {
+                addToDisplay(this.getAttribute('data-num'))
+                operStatus=true
+            };
+            
+        };
+        for (let i = 0; i < btnsOperators.length; i++) {
+            
+            btnsOperators[i].onclick = function() {
+                if (operStatus) {
+                    addToDisplay(this.getAttribute('data-opr'))
+                    operStatus=false
+                }
+            }
+        }
+    </script>  
     </script>
 </body>
 </html>
